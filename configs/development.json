@@ -1,21 +1,14 @@
 {
     "typeName": "ruleBasedMatchMaker.development",
-    "options": {
-        "components": {
-            "server": {
-                "options": {
-                    "components": {
-                        "matchMaker": {
-                            "options": {
-                                "strategy": "gpii.matchMaker.ruleBased.disposeStrategy"
-                            }
-                        }
-                    }
-                }
-            }
-        }
-    },
     "includes": [
         "../node_modules/universal/gpii/node_modules/matchMaker/configs/development.json"
-    ]
+    ],
+    "demands": [{
+        "demandingName": "gpii.matchMaker.match",
+        "contextNames": ["gpii.matchMaker", "ruleBasedMatchMaker.development"],
+        "demandSpec": {
+            "funcName": "gpii.matchMaker.ruleBased.match",
+            "args": ["{callbackWrapper}", "{arguments}.0", "{arguments}.1", "{request}.req.body", "{arguments}.2"]
+        }
+    }]
 }

@@ -1,28 +1,13 @@
 {
     "typeName": "ruleBasedMatchMaker.production",
-    "options": {
-        "components": {
-            "server": {
-                "options": {
-                    "components": {
-                        "matchMaker": {
-                            "options": {
-                                "strategy": "gpii.matchMaker.ruleBased.match"
-                            }
-                        }
-                    }
-                }
-            }
-        }
-    },
     "includes": [
         "../node_modules/universal/gpii/node_modules/matchMaker/configs/production.json"
     ],
 	"demands": [{
         "demandingName": "gpii.matchMaker.match",
-        "contextNames": ["gpii.matchMaker", "flowManager.preferencesServer.solutionsRegistry.deviceReporter.matchMaker.ontologyServer.development"],
+        "contextNames": ["gpii.matchMaker", "ruleBasedMatchMaker.production"],
         "demandSpec": {
-            "funcName": "gpii.ruleBasedMatchMaker.match",
+            "funcName": "gpii.matchMaker.ruleBased.match",
             "args": ["{callbackWrapper}", "{arguments}.0", "{arguments}.1", "{request}.req.body", "{arguments}.2"]
         }
     }]

@@ -6,14 +6,8 @@
   "bugs": "http://issues.gpii.org/",
   "homepage": "http://gpii.net/",
   "dependencies": {
-      "universal": "git://github.com/GPII/universal.git#a03b5e4512691cad032186434bd3e8151ad23a6d",
-	  "express": "~3.1.0",
-        "infusion": "git://github.com/kaspermarkus/infusion.git#f8b288820995d0b7fcf3479c528083eef6ff6ce6",
-        "node-uuid": "~1.4.0",
-        "semver": "~1.1.4",
-        "when": "~1.8.1",
-        "xml-mapping": "~1.2.0",
-        "ini": "git://github.com/kaspermarkus/ini.git#ec778a5fe565e64531eaf7a713fbc0f5d8a9e22a"
+        "universal": "git://github.com/GPII/universal.git#a03b5e4512691cad032186434bd3e8151ad23a6d",
+        "when": "~1.8.1"
   },
   "devDependencies": {
         "jqUnit": "git://github.com/fluid-project/node-jqUnit.git#e9bf72445bd343a4f3aabe3ba96a1087d3498612"
