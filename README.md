@@ -36,7 +36,7 @@ To run the rule-based matchmaker, simply type:
 - Default environment is development.
 - Path to configs folder can be absolute or relative to the current user directory.
 
-For example:
+For example, under windows7 with msysgit installed, get a git prompt and type:
 
     bin/ruleBasedMatchMaker
     bin/ruleBasedMatchMaker /Users/{userName}/ruleBasedMatchMaker/configs/
@@ -50,6 +50,12 @@ Usage example using [curl](http://curl.haxx.se/):
 
 	curl -X POST -H "Content-Type: application/json" localhost:8080/match -d @testData\input_rule1Windows.json
 
+Usage example using curl from msysgit:
+
+	curl -X POST -H "Content-Type: application/json" localhost:8080/match -d @testData/input_rule1Windows.json
+	
+	
+	
 Troubleshooting:
 
 	When executing the Rule-based MatchMaker, a new directory (/logs) is automatically created. 
